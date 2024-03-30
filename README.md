@@ -33,7 +33,15 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<div>
+    <a href="https://www.loom.com/share/c6d3c863586042a68522dc9d6217e9e4">
+    </a>
+    <a href="https://www.loom.com/share/c6d3c863586042a68522dc9d6217e9e4">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/c6d3c863586042a68522dc9d6217e9e4-with-play.gif">
+    </a>
+  </div>
+
+<!-- <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
