@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import TypeFilter from './TypeFilter';
 import List from "../Components/List";
+import Chart from "../Components/Chart";
 
-const API_KEY = "db19e029289049be90ba0c2cd1fbd1cf";
+const API_KEY = "b9521e8fa37840de938bc8bb8ba8cbf2";
 
 const Dashboard = ({ data }) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -100,6 +101,10 @@ const Dashboard = ({ data }) => {
                     <input type='text' placeholder='Search for a recipe...' value={searchTerm} onChange={handleSearch}></input>
                 </div>
                 <List filteredRecipes={filteredRecipes}/>
+            </div>
+
+            <div className='chart-container'>
+                <Chart recipeData={filteredRecipes} />
             </div>
             
         </div>
