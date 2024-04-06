@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
+import FoodDetails from './Components/FoodDetails';
 import Dashboard from "./Components/Dashboard"
 // import TypeFilter from './Components/TypeFilter';
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
@@ -10,7 +12,7 @@ function App() {
 
   useEffect(() => {
     const fetchAllCoinData = async () => {
-      const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?number=100&maxSugar=20&minProtein=5&apiKey=" + API_KEY);
+      const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?number=100&addRecipeNutrition=true&maxSugar=20&minProtein=5&apiKey=" + API_KEY);
       const json = await response.json();
       setList(json);
     };
@@ -31,18 +33,16 @@ function App() {
   console.log("list: ", list);
 
   return (
-    <>
-      <h1 className='title'>Recipe Dashboard</h1>
-      <h2 className='about'>Up to 27 cuisines to choose from!</h2>
-
-      {/* <div className='Sidebar'>
-      {list && <TypeFilter handleFilter={setSelectedTypes}/>}
-      </div> */}
-
-      <div className='Dashboard'>
-      {list && <Dashboard data={list}/>}
-      </div>
-    </>
+    <Router>
+      <>
+        <h1 className='title'>Recipe Dashboard</h1>
+        <h2 className='about'>Up to 27 cuisines to choose from!</h2>
+        <Routes>
+          <Route path='/' element={<Dashboard data={list} />} />
+          <Route path='/food-details' element={<FoodDetails />} />
+        </Routes>
+      </>
+    </Router>
   )
 }
 

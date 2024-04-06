@@ -73,3 +73,37 @@
   font-size: 18px;
   text-align: center;
 }
+
+.food-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  /* margin-left: 400px; */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.food-details h2 {
+  color: #ff1010;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.food-details h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.food-details p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 8px;
+}

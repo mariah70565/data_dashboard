@@ -3,7 +3,7 @@ import TypeFilter from './TypeFilter';
 import List from "../Components/List";
 import Chart from "../Components/Chart";
 
-const API_KEY = "b9521e8fa37840de938bc8bb8ba8cbf2";
+const API_KEY = "0f73d66f8cce46ecb9b2adb0c9583489";
 
 const Dashboard = ({ data }) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -59,7 +59,7 @@ const Dashboard = ({ data }) => {
     
         // Fetch data based on updated selected types
         const typeParam = updatedSelectedTypes.join(',');
-        const apiURL = `https://api.spoonacular.com/recipes/complexSearch?number=100&&maxSugar=20&minProtein=5&apiKey=${API_KEY}&type=${typeParam}`;
+        const apiURL = `https://api.spoonacular.com/recipes/complexSearch?number=100&addRecipeNutrition=true&maxSugar=20&minProtein=5&apiKey=${API_KEY}&type=${typeParam}`;
     
         const response = await fetch(apiURL);
         const json = await response.json();
@@ -73,15 +73,16 @@ const Dashboard = ({ data }) => {
     };
 
     useEffect(() => {
-        // Filter recipes based on search term and selected types
-        const filteredResults = data.results.filter(recipe => {
-            const matchesSearch = recipe.title.toLowerCase().includes(searchTerm);
-            const matchesType = selectedTypes.length === 0 || selectedTypes.includes(recipe.type);
-            return matchesSearch && matchesType;
-        });
-        setFilteredRecipes(filteredResults);
-        console.log("filteredrecipes: ", filteredRecipes);
-    }, [data.results, searchTerm, selectedTypes]);
+        if (data && data.results) {
+            // Filter recipes based on search term and selected types
+            const filteredResults = data.results.filter(recipe => {
+                const matchesSearch = recipe.title.toLowerCase().includes(searchTerm);
+                const matchesType = selectedTypes.length === 0 || selectedTypes.includes(recipe.type);
+                return matchesSearch && matchesType;
+            });
+            setFilteredRecipes(filteredResults);
+        }
+    }, [data, searchTerm, selectedTypes]);
 
     return (
         <div className='main-page'>

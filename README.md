@@ -1,29 +1,23 @@
-# Web Development Project 5 - Data Dashboard
+# Web Development Project 6 - Data Dashboard
 
 Submitted by: Mariah Gonzales
+This web app: allows users to view up to 100 different food items. They can search an item or filter through the items by selecting a food type. They can also view the total number of food items displayed based on their filter or search preferance (if any), as well as the range of sugar count in the items displayed, and the average protein count. There's also a pie chart that shows the total sugar and protein distribution across all of the results shown. When a food card is clicked, the user is taken to another link in the page that shows them all the nutrition facts of that particular item, including sugar, protein, calories, fat, saturated fat, sodium, fiber, and calcium.
 
-This web app: allows users to view up to 100 different food items. They can search an item or filter through the items by selecting a food type. They can also view the total number of food items displayed based on their filter or search preferance (if any), as long as the range of sugar count in the items displayed, and the average protein count.
-
-Time spent: 15 hours spent in total
+Time spent: 6 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The list displays a list of data fetched using an API call**
-- [x] **Data uses the useEffect React hook and async/await syntax**
-- [x] **The app dashboard includes at least three summary statistics about the data such as**
-  - [x] *number of food items that match their filter or search (if any)*
-  - [x] *sugar count range based on what's shown*
-  - [x] *average protein count*
-- [x] **A search bar allows the user to search for an item in the fetched data**
-- [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [x] **Clicking on an item in the list view displays more details about it**
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
+
 
 The following **optional** features are implemented:
 
-- [x] Multiple filters can be applied simultaneously
-- [x] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [ ] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
@@ -32,16 +26,13 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
 <div>
-    <a href="https://www.loom.com/share/c6d3c863586042a68522dc9d6217e9e4">
+    <a href="https://www.loom.com/share/cd7b1c272adb49789f8256098c0398ca">
     </a>
-    <a href="https://www.loom.com/share/c6d3c863586042a68522dc9d6217e9e4">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/c6d3c863586042a68522dc9d6217e9e4-1711767274990-with-play.gif">
+    <a href="https://www.loom.com/share/cd7b1c272adb49789f8256098c0398ca">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/cd7b1c272adb49789f8256098c0398ca-with-play.gif">
     </a>
-</div>
-
-<!-- <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
+  </div>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
@@ -54,7 +45,7 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
-This was by far one of the more difficult projects I've done for this class. I struggled a lot with getting everything to lay nicely in my css styling, and I also struggled a lot with implementing the filters, so then when applied, the list would update to only show items that matched the user's preference.
+Figuring out how to incorporate a graph was a little tricky as I never had any experience with creating one on a website. I also struggled with accessing information that I wanted to include into my food details link.
 
 ## License
 

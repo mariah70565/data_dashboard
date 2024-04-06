@@ -24,8 +24,8 @@ const Chart = ({ recipeData }) => {
     labels: ['Protein', 'Sugar'],
     datasets: [{
       data: [totalProtein, totalSugar],
-      backgroundColor: ['#FF6384', '#36A2EB'],
-      hoverBackgroundColor: ['#FF6384', '#36A2EB'],
+      backgroundColor: ['#FF978C', '#C0F9FF'],
+      hoverBackgroundColor: ['#FF1900', '#00E6FF'],
     }],
   };
   console.log("Chart data:", data);
